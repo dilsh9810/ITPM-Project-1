@@ -49,7 +49,9 @@ public class ManageAssignRooms extends javax.swing.JFrame {
     {
         
         try {
-                 
+                
+                   //Retrieve locations with assigned sessions
+                   
                    Connection c = dbcon.getConnection();
 
                    String sql = "select * from ASSIGNROOMSTOSESSION";
@@ -62,14 +64,12 @@ public class ManageAssignRooms extends javax.swing.JFrame {
 
                     int ccount = mdata.getColumnCount();
 
-                    
                     DefaultTableModel Tablem = (DefaultTableModel) JTable2.getModel();
                     
-                   
                     Tablem.setRowCount(0);
                     
                     
-                     while (rs.next()) {
+                    while (rs.next()) {
 
                         Vector cdata = new Vector();
 
@@ -324,6 +324,9 @@ public class ManageAssignRooms extends javax.swing.JFrame {
     }//GEN-LAST:event_btnrefreshActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        
+        // Delete Sessions with rooms
+        
         
         int row  = JTable2.getSelectedRow();
         
