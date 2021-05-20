@@ -406,6 +406,9 @@ public class Managelocations extends javax.swing.JFrame {
         
         
         try{
+            
+                //Update locations
+                
                 id = Integer.parseInt(RecordTable.getValueAt(selectrows, 0).toString());
                 
                 Connection c = dbcon.getConnection();
@@ -446,6 +449,7 @@ public class Managelocations extends javax.swing.JFrame {
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         
+        //Delete Locations
         int row  = jTable1.getSelectedRow();
         
         int rowc = jTable1.getModel().getRowCount();
