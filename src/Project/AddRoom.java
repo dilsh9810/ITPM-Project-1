@@ -284,6 +284,8 @@ public class AddRoom extends javax.swing.JFrame {
         String capacity = txtcapac.getText().toString();
         String faculty = cmbbxfaculty.getSelectedItem().toString();
         String roomt = cmbbxroomtype.getSelectedItem().toString();
+        
+            //Validations
 
         if (faculty.equals("Faculty of Business") && roomt.equals("Laboratory") || faculty.equals("School of tourism") && roomt.equals("Laboratory")) {
 
@@ -300,7 +302,7 @@ public class AddRoom extends javax.swing.JFrame {
             
                 try {
                       
-                          
+                           // Insert Operation for location Management                   
                         
                            Connection c = dbcon.getConnection();
                        
